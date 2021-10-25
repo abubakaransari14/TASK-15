@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Enter a Number: <input type="text" name="text" id="yourNo"></p>
+
+	<p><button onclick="timeConvert()">Click Me!</button></p>
+
+	<!-- Result will Display Here-->
+
+	<p id="result"></p>
+
+    <script>
+        function timeConvert() {
+			// body...
+
+			let num = document.getElementById('yourNo').value;
+
+			var hours = Math.floor(num / 60);
+			var minutes = num % 60;
+
+			//Print EveryThing and LOOK VERY CAREFULLY NOW!!!
+
+			document.getElementById("result").innerHTML = hours + ":" + minutes + "<br>" + "( " + hours + " Hours & " + minutes + " Minutes )";
+		}
+		
+    </script>
+</body>
+</html>
